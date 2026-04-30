@@ -1,37 +1,44 @@
-k<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>إكسسوارات هاند ميد 💖</title>
 
-    <!-- ربط ملف التصميم -->
-    <link rel="stylesheet" href="style.css">
+    <!-- 🔥 أهم سطر عشان الموبايل -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>إكسسوارات هاند ميد 💖</title>
 
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             background-color: #fdf6f0;
             text-align: center;
-            padding: 40px;
+            padding: 15px;
+            margin: 0;
         }
 
         h1 {
             color: #c89b7b;
-            font-size: 40px;
+            font-size: 32px;
             margin-bottom: 10px;
         }
 
         p {
             color: #555;
-            font-size: 18px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .hero {
             margin-bottom: 30px;
         }
 
         .card {
             background: white;
-            padding: 20px;
+            padding: 15px;
             margin: 15px auto;
-            width: 250px;
+            width: 90%;
+            max-width: 300px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
@@ -40,19 +47,23 @@ k<!DOCTYPE html>
             background-color: #c89b7b;
             color: white;
             border: none;
-            padding: 12px 20px;
+            padding: 12px;
             font-size: 16px;
             border-radius: 10px;
             cursor: pointer;
             margin-top: 10px;
+            width: 100%;
         }
 
         button:hover {
             background-color: #a97c5f;
         }
 
-        .hero {
-            margin-bottom: 40px;
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
         }
     </style>
 </head>
@@ -88,9 +99,9 @@ k<!DOCTYPE html>
         <button onclick="orderProduct(103)">اطلبها</button>
     </div>
 
-    <!-- سكريبت واتساب -->
+    <!-- واتساب -->
     <script>
-        let phone = "201118618196"; // 👈 غير الرقم ده برقمك
+        let phone = "201118618196";
 
         function orderProduct(code) {
             let msg = "السلام عليكم، عايز أطلب المنتج رقم " + code;
