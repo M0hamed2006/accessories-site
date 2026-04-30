@@ -3,155 +3,482 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر الإكسسوارات 💖</title>
-
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background: #fdf6f0;
-            text-align: center;
-        }
-
-        header {
-            padding: 25px;
-        }
-
-        h1 {
-            color: #c89b7b;
-            margin-bottom: 10px;
-        }
-
-        .badge {
-            background: #c89b7b;
-            color: white;
-            display: inline-block;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 14px;
-            margin: 5px;
-        }
-
-        .section-title {
-            margin: 25px 0 10px;
-            font-size: 20px;
-            color: #333;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 15px;
-            padding: 15px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .card h3 {
-            font-size: 15px;
-            margin: 5px 0;
-        }
-
-        .price {
-            color: #c89b7b;
-            font-weight: bold;
-        }
-
-        button {
-            width: 100%;
-            margin-top: 8px;
-            padding: 12px;
-            border: none;
-            background: #25D366; /* أخضر واتساب 🔥 */
-            color: white;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 15px;
-        }
-
-        button:hover {
-            background: #1ebe5d;
-        }
-
-        .offer {
-            background: #fff3e6;
-            margin: 15px;
-            padding: 15px;
-            border-radius: 15px;
-            border: 2px dashed #c89b7b;
-        }
-    </style>
+    <title>✨ LUXÉ - الإكسسوارات الفاخرة | الحرفية العالمية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <h1>متجر الإكسسوارات 💖</h1>
+<!-- 🌟 PARTICLES BACKGROUND -->
+<div class="particles-container" id="particlesContainer"></div>
 
-    <div class="badge">🔥 عرض محدود</div>
-    <div class="badge">خصم أول طلب</div>
-</header>
+<!-- 🧭 NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <div class="logo-glow">✨</div>
+            <span class="logo-text">LUXÉ</span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link">الرئيسية</a></li>
+            <li><a href="#collections" class="nav-link">المجموعات</a></li>
+            <li><a href="#gallery" class="nav-link">الصور</a></li>
+            <li><a href="#about" class="nav-link">عننا</a></li>
+            <li><a href="#contact" class="nav-link">تواصلي</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </div>
+</nav>
 
-<div class="offer">
-    🎁 أول طلب ليك عليه خصم خاص! اطلب دلوقتي قبل ما العرض يخلص 😏
-</div>
-
-<!-- أساور -->
-<div class="section-title">💫 الأساور</div>
-<div class="grid">
-
-    <div class="card">
-        <h3>إسوارة أنيقة</h3>
-        <p class="price">101</p>
-        <button onclick="order(101)">💬 اطلب على واتساب</button>
+<!-- 🎬 HERO SECTION - PREMIUM -->
+<section id="home" class="hero">
+    <div class="hero-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="gradient-orb orb-4"></div>
     </div>
 
-    <div class="card">
-        <h3>إسوارة حب</h3>
-        <p class="price">102</p>
-        <button onclick="order(102)">💬 اطلب على واتساب</button>
+    <div class="hero-content">
+        <div class="hero-text">
+            <div class="text-animation">
+                <h1 class="hero-title">
+                    <span class="word" data-word="0">الفخامة</span>
+                    <span class="word" data-word="1">بكل</span>
+                    <span class="word" data-word="2">تفصيلة</span>
+                </h1>
+            </div>
+            <p class="hero-subtitle">
+                إكسسوارات مصنوعة بدقة عالمية لتعكس ذوقك الرفيع
+            </p>
+            
+            <div class="hero-features">
+                <div class="feature-item">
+                    <span class="feature-icon">👑</span>
+                    <span>جودة فاخرة</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✨</span>
+                    <span>تصاميم حصرية</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">💎</span>
+                    <span>حسب الطلب</span>
+                </div>
+            </div>
+
+            <div class="cta-wrapper">
+                <button class="btn btn-primary" onclick="scrollToCollections()">
+                    <span class="btn-text">اكتشفي المجموعات</span>
+                    <span class="btn-glow"></span>
+                </button>
+                <button class="btn btn-secondary" onclick="contactWhatsapp()">
+                    <span class="btn-text">تواصلي الآن</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="floating-diamond"></div>
+            <div class="floating-circle circle-1"></div>
+            <div class="floating-circle circle-2"></div>
+            <div class="floating-circle circle-3"></div>
+        </div>
+    </div>
+</section>
+
+<!-- 🎯 LUXURY BANNER -->
+<section class="luxury-banner">
+    <div class="banner-content">
+        <h2>عرض حصري لحضرتك</h2>
+        <div class="banner-offers">
+            <div class="offer-box">
+                <div class="offer-percent">15%</div>
+                <p>خصم أول طلب</p>
+            </div>
+            <div class="offer-box">
+                <div class="offer-percent">FREE</div>
+                <p>تصميم مخصص</p>
+            </div>
+            <div class="offer-box">
+                <div class="offer-percent">VIP</div>
+                <p>خدمة فردية</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 📸 GALLERY SECTION -->
+<section id="gallery" class="gallery-section">
+    <h2 class="section-title">أجمل اللحظات</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item item-1">
+            <div class="gallery-image"></div>
+            <div class="gallery-overlay">أساور فاخرة</div>
+        </div>
+        <div class="gallery-item item-2">
+            <div class="gallery-image"></div>
+            <div class="gallery-overlay">سلاسل ذهبية</div>
+        </div>
+        <div class="gallery-item item-3">
+            <div class="gallery-image"></div>
+            <div class="gallery-overlay">خواتم فريدة</div>
+        </div>
+        <div class="gallery-item item-4">
+            <div class="gallery-image"></div>
+            <div class="gallery-overlay">مجموعة متكاملة</div>
+        </div>
+    </div>
+</section>
+
+<!-- 💎 COLLECTIONS SECTION -->
+<section id="collections" class="collections">
+    <h2 class="section-title premium-title">مجموعاتنا المميزة</h2>
+
+    <!-- BRACELETS COLLECTION -->
+    <div class="collection-wrapper">
+        <div class="collection-header">
+            <div class="collection-icon">💫</div>
+            <h3>الأساور الملكية</h3>
+            <p>تصاميم تعكس أنوثتك الراقية</p>
+        </div>
+
+        <div class="products-container">
+            <!-- Product 1 -->
+            <div class="product-card premium-card">
+                <div class="card-shine"></div>
+                <div class="product-image-wrapper">
+                    <div class="product-image gradient-gold"></div>
+                    <div class="product-badge premium">✨ جديد</div>
+                    <div class="price-tag">E£ 280</div>
+                </div>
+                <div class="product-content">
+                    <h4>إسوارة الذهب الملكي</h4>
+                    <p class="product-description">ذهب عيار 18 مع خرز كريستال بلجيكي</p>
+                    <div class="product-meta">
+                        <span class="code">GOLD-ROYAL-01</span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <button class="order-btn premium-order" onclick="order('GOLD-ROYAL-01', 'إسوارة الذهب الملكي', 280)">
+                        <span class="order-icon">👑</span> اطلبيها الآن
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card premium-card">
+                <div class="card-shine"></div>
+                <div class="product-image-wrapper">
+                    <div class="product-image gradient-diamond"></div>
+                    <div class="product-badge hot">🔥 الأكثر طلباً</div>
+                    <div class="price-tag">E£ 320</div>
+                </div>
+                <div class="product-content">
+                    <h4>إسوارة الأحجار</h4>
+                    <p class="product-description">أحجار كريمة طبيعية مع فضة 925</p>
+                    <div class="product-meta">
+                        <span class="code">GEM-LUXURY-02</span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <button class="order-btn premium-order hot-order" onclick="order('GEM-LUXURY-02', 'إسوارة الأحجار', 320)">
+                        <span class="order-icon">💎</span> اطلبيها الآن
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card premium-card">
+                <div class="card-shine"></div>
+                <div class="product-image-wrapper">
+                    <div class="product-image gradient-rose"></div>
+                    <div class="product-badge exclusive">⭐ حصري</div>
+                    <div class="price-tag">E£ 250</div>
+                </div>
+                <div class="product-content">
+                    <h4>إسوارة الوردة</h4>
+                    <p class="product-description">تصميم يدوي بذهب وردي فاخر</p>
+                    <div class="product-meta">
+                        <span class="code">ROSE-LUXE-03</span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <button class="order-btn premium-order exclusive-order" onclick="order('ROSE-LUXE-03', 'إسوارة الوردة', 250)">
+                        <span class="order-icon">🌹</span> اطلبيها الآن
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card premium-card">
+                <div class="card-shine"></div>
+                <div class="product-image-wrapper">
+                    <div class="product-image gradient-pearl"></div>
+                    <div class="product-badge custom">🎨 حسب الطلب</div>
+                    <div class="price-tag">من E£ 300</div>
+                </div>
+                <div class="product-content">
+                    <h4>إسوارة اللؤلؤ</h4>
+                    <p class="product-description">لؤلؤ طبيعي مع تصميم مخصص</p>
+                    <div class="product-meta">
+                        <span class="code">PEARL-CUSTOM-04</span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <button class="order-btn premium-order custom-order" onclick="contactForCustom('إسوارة اللؤلؤ المخصصة')">
+                        <span class="order-icon">🌸</span> اطلبيها الآن
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
-</div>
+    <!-- NECKLACES COLLECTION -->
+    <div class="collection-wrapper">
+        <div class="collection-header">
+            <div class="collection-icon">📿</div>
+            <h3>السلاسل الراقية</h3>
+            <p>جمال يتدفق مع حركتك</p>
+        </div>
 
-<!-- سلاسل -->
-<div class="section-title">📿 السلاسل</div>
-<div class="grid">
+        <div class="products-container">
+            <!-- Product 5 -->
+            <div class="product-card premium-card">
+                <div class="card-shine"></div>
+                <div class="product-image-wrapper">
+                    <div class="product-image gradient-sapphire"></div>
+                    <div class="product-badge premium">✨ مختار</div>
+                    <div class="price-tag">E£ 380</div>
+                </div>
+                <div class="product-content">
+                    <h4>سلسلة الياقوت</h4>
+                    <p class="product-description">فضة بيضاء مع أحجار صفراء</p>
+                    <div class="product-meta">
+                        <span class="code">SAPPHIRE-CHAIN-05</span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <button class="order-btn premium-order" onclick="order('SAPPHIRE-CHAIN-05', 'سلسلة الياقوت', 380)">
+                        <span class="order-icon">💙</span> اطلبيها الآن
+                    </button>
+                </div>
+            </div>
 
-    <div class="card">
-        <h3>سلسلة شيك</h3>
-        <p class="price">201</p>
-        <button onclick="order(201)">💬 اطلب على واتساب</button>
+            <!-- Product 6 -->
+            <div class="product-card premium-card">
+                <div class="card-shine"></div>
+                <div class="product-image-wrapper">
+                    <div class="product-image gradient-emerald"></div>
+                    <div class="product-badge hot">🔥 النجمة</div>
+                    <div class="price-tag">E£ 420</div>
+                </div>
+                <div class="product-content">
+                    <h4>سلسلة الزمرد</h4>
+                    <p class="product-description">ذهب عيار 18 مع لؤلؤ طبيعي</p>
+                    <div class="product-meta">
+                        <span class="code">EMERALD-CHAIN-06</span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <button class="order-btn premium-order hot-order" onclick="order('EMERALD-CHAIN-06', 'سلسلة الزمرد', 420)">
+                        <span class="order-icon">💚</span> اطلبيها الآن
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
-</div>
+    <!-- RINGS COLLECTION -->
+    <div class="collection-wrapper">
+        <div class="collection-header">
+            <div class="collection-icon">💍</div>
+            <h3>الخواتم الفريدة</h3>
+            <p>كل خاتم قصة حب</p>
+        </div>
 
-<!-- خواتم -->
-<div class="section-title">💍 الخواتم</div>
-<div class="grid">
+        <div class="products-container">
+            <!-- Product 7 -->
+            <div class="product-card premium-card">
+                <div class="card-shine"></div>
+                <div class="product-image-wrapper">
+                    <div class="product-image gradient-amethyst"></div>
+                    <div class="product-badge exclusive">⭐ حصري</div>
+                    <div class="price-tag">E£ 350</div>
+                </div>
+                <div class="product-content">
+                    <h4>خاتم الأميثيست</h4>
+                    <p class="product-description">حجر الأميثيست الملكي مع ذهب أبيض</p>
+                    <div class="product-meta">
+                        <span class="code">AMETHYST-RING-07</span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <button class="order-btn premium-order exclusive-order" onclick="order('AMETHYST-RING-07', 'خاتم الأميثيست', 350)">
+                        <span class="order-icon">💜</span> اطلبيها الآن
+                    </button>
+                </div>
+            </div>
 
-    <div class="card">
-        <h3>خاتم هاند ميد</h3>
-        <p class="price">301</p>
-        <button onclick="order(301)">💬 اطلب على واتساب</button>
+            <!-- Product 8 -->
+            <div class="product-card premium-card">
+                <div class="card-shine"></div>
+                <div class="product-image-wrapper">
+                    <div class="product-image gradient-moonstone"></div>
+                    <div class="product-badge custom">🎨 مخصص</div>
+                    <div class="price-tag">E£ 400</div>
+                </div>
+                <div class="product-content">
+                    <h4>خاتم حجر القمر</h4>
+                    <p class="product-description">حجر طبيعي مع تصميم عتيق</p>
+                    <div class="product-meta">
+                        <span class="code">MOONSTONE-RING-08</span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <button class="order-btn premium-order custom-order" onclick="contactForCustom('خاتم حجر القمر')">
+                        <span class="order-icon">🌙</span> اطلبيها الآن
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card premium-card">
+                <div class="card-shine"></div>
+                <div class="product-image-wrapper">
+                    <div class="product-image gradient-ruby"></div>
+                    <div class="product-badge hot">🔥 رومانسي</div>
+                    <div class="price-tag">E£ 450</div>
+                </div>
+                <div class="product-content">
+                    <h4>خاتم الياقوتة الحمراء</h4>
+                    <p class="product-description">ياقوتة طبيعية مع ماس</p>
+                    <div class="product-meta">
+                        <span class="code">RUBY-RING-09</span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <button class="order-btn premium-order hot-order" onclick="order('RUBY-RING-09', 'خاتم الياقوتة الحمراء', 450)">
+                        <span class="order-icon">❤️</span> اطلبيها الآن
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
 
-</div>
+<!-- 🌟 ABOUT SECTION -->
+<section id="about" class="about-section">
+    <div class="about-content">
+        <div class="about-text">
+            <h2 class="about-title">حكايتنا الفاخرة</h2>
+            <p class="about-description">
+                في كل قطعة نصنعها، نضع قلبنا وروحنا وخبرة سنوات من الحرفية العالمية.
+            </p>
+            <div class="about-features">
+                <div class="about-item">
+                    <span class="about-icon">🏆</span>
+                    <h4>الحرفية العالمية</h4>
+                    <p>صنع يدوي بدقة عالية</p>
+                </div>
+                <div class="about-item">
+                    <span class="about-icon">💎</span>
+                    <h4>المواد الفاخرة</h4>
+                    <p>أفضل المواد الطبيعية</p>
+                </div>
+                <div class="about-item">
+                    <span class="about-icon">🎨</span>
+                    <h4>التصاميم الحصرية</h4>
+                    <p>تصاميم فريدة من نوعها</p>
+                </div>
+                <div class="about-item">
+                    <span class="about-icon">💝</span>
+                    <h4>الخدمة المتميزة</h4>
+                    <p>كل عميلة لنا ملكة</p>
+                </div>
+            </div>
+        </div>
 
-<script>
-    let phone = "201118618196";
+        <div class="about-stats">
+            <div class="stat-box">
+                <h3>10+</h3>
+                <p>سنوات خبرة</p>
+            </div>
+            <div class="stat-box">
+                <h3>5000+</h3>
+                <p>عميلة سعيدة</p>
+            </div>
+            <div class="stat-box">
+                <h3>∞</h3>
+                <p>فن بلا حدود</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    function order(code) {
-        let msg = "السلام عليكم، عايز أطلب المنتج رقم " + code + " مع خصم أول طلب 🔥";
-        let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
-        window.open(url, "_blank");
-    }
-</script>
+<!-- 💬 TESTIMONIALS -->
+<section class="testimonials-section">
+    <h2 class="section-title">أصوات أحبائنا</h2>
+    <div class="testimonials-grid">
+        <div class="testimonial-card testi-1">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"أجمل إسوارة شفتها في حياتي! الجودة والتصميم فوق أي توقع"</p>
+            <p class="testimonial-author">- ليلى</p>
+        </div>
+        <div class="testimonial-card testi-2">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"الخدمة الرائعة والرد السريع جعلوني عميلة دائمة 💕"</p>
+            <p class="testimonial-author">- منى</p>
+        </div>
+        <div class="testimonial-card testi-3">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"كل قطعة فيها روح، شعرت بفرق كبير جداً جداً!"</p>
+            <p class="testimonial-author">- سارة</p>
+        </div>
+    </div>
+</section>
+
+<!-- 📞 CONTACT SECTION -->
+<section id="contact" class="contact-section">
+    <div class="contact-overlay"></div>
+    <h2 class="section-title contact-title">تواصلي معنا</h2>
+    
+    <div class="contact-grid">
+        <div class="contact-card contact-1">
+            <div class="contact-icon-wrapper">
+                <span class="contact-icon">💬</span>
+            </div>
+            <h3>واتساب</h3>
+            <p>الرد الفوري ليكي</p>
+            <button class="contact-btn" onclick="contactWhatsapp()">
+                تواصلي الآن
+            </button>
+        </div>
+
+        <div class="contact-card contact-2">
+            <div class="contact-icon-wrapper">
+                <span class="contact-icon">📸</span>
+            </div>
+            <h3>إنستجرام</h3>
+            <p>شوفي أحدث الإنجازات</p>
+            <button class="contact-btn" onclick="window.open('https://instagram.com', '_blank')">
+                اتبعينا</button>
+        </div>
+
+        <div class="contact-card contact-3">
+            <div class="contact-icon-wrapper">
+                <span class="contact-icon">🎨</span>
+            </div>
+            <h3>تصميم خاص</h3>
+            <p>حقق حلمك معنا</p>
+            <button class="contact-btn" onclick="contactForCustom('استفسار عام')">
+                اطلبي الآن
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- 🔝 FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <p class="footer-main">✨ LUXÉ - حيث يلتقي الفن بالفخامة</p>
+        <p class="footer-sub">صنعة يدوية بحب من مصر | 2024 © جميع الحقوق محفوظة</p>
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="script.js"></script>
 
 </body>
 </html>
