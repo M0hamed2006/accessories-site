@@ -38,7 +38,6 @@
             color: #333;
         }
 
-        /* GRID */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -66,19 +65,19 @@
         button {
             width: 100%;
             margin-top: 8px;
-            padding: 10px;
+            padding: 12px;
             border: none;
-            background: #c89b7b;
+            background: #25D366; /* أخضر واتساب 🔥 */
             color: white;
             border-radius: 10px;
             cursor: pointer;
+            font-size: 15px;
         }
 
         button:hover {
-            background: #a97c5f;
+            background: #1ebe5d;
         }
 
-        /* عرض خاص */
         .offer {
             background: #fff3e6;
             margin: 15px;
@@ -99,8 +98,7 @@
 </header>
 
 <div class="offer">
-    🎁 أول طلب ليك عليه خصم خاص!  
-    اطلب دلوقتي قبل ما العرض يخلص 😏
+    🎁 أول طلب ليك عليه خصم خاص! اطلب دلوقتي قبل ما العرض يخلص 😏
 </div>
 
 <!-- أساور -->
@@ -110,13 +108,13 @@
     <div class="card">
         <h3>إسوارة أنيقة</h3>
         <p class="price">101</p>
-        <button onclick="order(101)">اطلب</button>
+        <button onclick="order(101)">💬 اطلب على واتساب</button>
     </div>
 
     <div class="card">
         <h3>إسوارة حب</h3>
         <p class="price">102</p>
-        <button onclick="order(102)">اطلب</button>
+        <button onclick="order(102)">💬 اطلب على واتساب</button>
     </div>
 
 </div>
@@ -128,7 +126,7 @@
     <div class="card">
         <h3>سلسلة شيك</h3>
         <p class="price">201</p>
-        <button onclick="order(201)">اطلب</button>
+        <button onclick="order(201)">💬 اطلب على واتساب</button>
     </div>
 
 </div>
@@ -140,7 +138,7 @@
     <div class="card">
         <h3>خاتم هاند ميد</h3>
         <p class="price">301</p>
-        <button onclick="order(301)">اطلب</button>
+        <button onclick="order(301)">💬 اطلب على واتساب</button>
     </div>
 
 </div>
@@ -149,7 +147,7 @@
     let phone = "201118618196";
 
     function order(code) {
-        let msg = "عايز أطلب المنتج رقم " + code + " مع خصم أول طلب";
+        let msg = "السلام عليكم، عايز أطلب المنتج رقم " + code + " مع خصم أول طلب 🔥";
         let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
         window.open(url, "_blank");
     }
