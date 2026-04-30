@@ -1,47 +1,21 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     background-color: #fdf6f0;
     text-align: center;
-    padding: 15px;
+    padding: 40px;
+    margin: 0;
 }
 
 /* العنوان */
 h1 {
     color: #c89b7b;
-    font-size: 32px;
-    margin-bottom: 10px;
+    font-size: 40px;
 }
 
 /* النص */
 p {
     color: #555;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-/* الكروت */
-.card {
-    background: white;
-    padding: 15px;
-    margin: 15px auto;
-    width: 100%;
-    max-width: 350px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* الصورة */
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 12px;
+    font-size: 18px;
 }
 
 /* الزرار */
@@ -49,28 +23,56 @@ button {
     background-color: #c89b7b;
     color: white;
     border: none;
-    padding: 14px;
+    padding: 12px 20px;
     font-size: 16px;
     border-radius: 10px;
     cursor: pointer;
-    width: 100%;
 }
 
-/* 💥 أهم جزء: الموبايل */
+/* الكروت */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* الصور (الأساس) */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* 📱 الموبايل بس */
 @media (max-width: 600px) {
 
     body {
         padding: 10px;
     }
 
-    .card {
-        width: 100%;
-        max-width: 100%;
+    h1 {
+        font-size: 28px;
     }
 
-    img {
+    p {
+        font-size: 16px;
+    }
+
+    .card {
         width: 100%;
-        max-width: 100%;
+        margin: 10px 0;
+        border-radius: 0;
+    }
+
+    /* 🔥 أهم سطر هنا */
+    img {
+        width: 100vw;
+        height: auto;
+        border-radius: 0;
     }
 
     button {
