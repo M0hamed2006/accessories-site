@@ -75,3 +75,24 @@ img {
         font-size: 16px;
     }
 }
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+/* على الموبايل نخلي الكروت تاخد الشاشة كاملة */
+@media (max-width: 600px) {
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 0;
+    }
+
+    body {
+        padding: 10px;
+    }
+}
