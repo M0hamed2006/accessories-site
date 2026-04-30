@@ -1,0 +1,109 @@
+k<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>إكسسوارات هاند ميد 💖</title>
+
+    <!-- ربط ملف التصميم -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #fdf6f0;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #c89b7b;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 15px auto;
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            background-color: #c89b7b;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #a97c5f;
+        }
+
+        .hero {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- الهيرو -->
+    <div class="hero">
+        <h1>إكسسوارات هاند ميد 💖</h1>
+        <p>تصميمات بتتعمل مخصوص ليكي على مزاجك ✨</p>
+
+        <button onclick="orderCustom()">
+            اطلب تصميم خاص على واتساب
+        </button>
+    </div>
+
+    <!-- المنتجات -->
+    <div class="card">
+        <h3>إسوارة أنيقة</h3>
+        <p>كود: 101</p>
+        <button onclick="orderProduct(101)">اطلبها</button>
+    </div>
+
+    <div class="card">
+        <h3>سلسلة شيك</h3>
+        <p>كود: 102</p>
+        <button onclick="orderProduct(102)">اطلبها</button>
+    </div>
+
+    <div class="card">
+        <h3>خاتم هاند ميد</h3>
+        <p>كود: 103</p>
+        <button onclick="orderProduct(103)">اطلبها</button>
+    </div>
+
+    <!-- سكريبت واتساب -->
+    <script>
+        let phone = "201118618196"; // 👈 غير الرقم ده برقمك
+
+        function orderProduct(code) {
+            let msg = "السلام عليكم، عايز أطلب المنتج رقم " + code;
+            let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
+            window.open(url, "_blank");
+        }
+
+        function orderCustom() {
+            let msg = "السلام عليكم، عايز تصميم خاص حسب الطلب";
+            let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>
