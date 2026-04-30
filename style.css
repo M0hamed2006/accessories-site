@@ -2,29 +2,76 @@ body {
     font-family: Arial;
     background-color: #fdf6f0;
     text-align: center;
-    padding: 50px;
+    padding: 40px;
+    margin: 0;
 }
 
 h1 {
     color: #c89b7b;
     font-size: 40px;
+    margin-bottom: 10px;
 }
 
 p {
     color: #555;
     font-size: 18px;
+    margin-bottom: 25px;
 }
 
 button {
     background-color: #c89b7b;
     color: white;
     border: none;
-    padding: 15px 25px;
-    font-size: 18px;
+    padding: 12px 20px;
+    font-size: 16px;
     border-radius: 10px;
     cursor: pointer;
+    margin-top: 10px;
+    width: auto;
 }
 
 button:hover {
     background-color: #a97c5f;
+}
+
+/* الكروت */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* الصور لو ضفتها بعدين */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* 📱 الموبايل */
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+    }
 }
