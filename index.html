@@ -2,119 +2,158 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-
-    <!-- 🔥 أهم سطر عشان الموبايل -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>إكسسوارات هاند ميد 💖</title>
+    <title>متجر الإكسسوارات 💖</title>
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #fdf6f0;
-            text-align: center;
-            padding: 15px;
+            font-family: Arial;
             margin: 0;
+            background: #fdf6f0;
+            text-align: center;
+        }
+
+        header {
+            padding: 25px;
         }
 
         h1 {
             color: #c89b7b;
-            font-size: 32px;
             margin-bottom: 10px;
         }
 
-        p {
-            color: #555;
-            font-size: 16px;
-            margin-bottom: 20px;
+        .badge {
+            background: #c89b7b;
+            color: white;
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin: 5px;
         }
 
-        .hero {
-            margin-bottom: 30px;
+        .section-title {
+            margin: 25px 0 10px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            padding: 15px;
         }
 
         .card {
             background: white;
-            padding: 15px;
-            margin: 15px auto;
-            width: 90%;
-            max-width: 300px;
             border-radius: 15px;
+            padding: 10px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
+        .card h3 {
+            font-size: 15px;
+            margin: 5px 0;
+        }
+
+        .price {
+            color: #c89b7b;
+            font-weight: bold;
+        }
+
         button {
-            background-color: #c89b7b;
-            color: white;
+            width: 100%;
+            margin-top: 8px;
+            padding: 10px;
             border: none;
-            padding: 12px;
-            font-size: 16px;
+            background: #c89b7b;
+            color: white;
             border-radius: 10px;
             cursor: pointer;
-            margin-top: 10px;
-            width: 100%;
         }
 
         button:hover {
-            background-color: #a97c5f;
+            background: #a97c5f;
         }
 
-        img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            display: block;
+        /* عرض خاص */
+        .offer {
+            background: #fff3e6;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 15px;
+            border: 2px dashed #c89b7b;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- الهيرو -->
-    <div class="hero">
-        <h1>إكسسوارات هاند ميد 💖</h1>
-        <p>تصميمات بتتعمل مخصوص ليكي على مزاجك ✨</p>
+<header>
+    <h1>متجر الإكسسوارات 💖</h1>
 
-        <button onclick="orderCustom()">
-            اطلب تصميم خاص على واتساب
-        </button>
-    </div>
+    <div class="badge">🔥 عرض محدود</div>
+    <div class="badge">خصم أول طلب</div>
+</header>
 
-    <!-- المنتجات -->
+<div class="offer">
+    🎁 أول طلب ليك عليه خصم خاص!  
+    اطلب دلوقتي قبل ما العرض يخلص 😏
+</div>
+
+<!-- أساور -->
+<div class="section-title">💫 الأساور</div>
+<div class="grid">
+
     <div class="card">
         <h3>إسوارة أنيقة</h3>
-        <p>كود: 101</p>
-        <button onclick="orderProduct(101)">اطلبها</button>
+        <p class="price">101</p>
+        <button onclick="order(101)">اطلب</button>
     </div>
+
+    <div class="card">
+        <h3>إسوارة حب</h3>
+        <p class="price">102</p>
+        <button onclick="order(102)">اطلب</button>
+    </div>
+
+</div>
+
+<!-- سلاسل -->
+<div class="section-title">📿 السلاسل</div>
+<div class="grid">
 
     <div class="card">
         <h3>سلسلة شيك</h3>
-        <p>كود: 102</p>
-        <button onclick="orderProduct(102)">اطلبها</button>
+        <p class="price">201</p>
+        <button onclick="order(201)">اطلب</button>
     </div>
+
+</div>
+
+<!-- خواتم -->
+<div class="section-title">💍 الخواتم</div>
+<div class="grid">
 
     <div class="card">
         <h3>خاتم هاند ميد</h3>
-        <p>كود: 103</p>
-        <button onclick="orderProduct(103)">اطلبها</button>
+        <p class="price">301</p>
+        <button onclick="order(301)">اطلب</button>
     </div>
 
-    <!-- واتساب -->
-    <script>
-        let phone = "201118618196";
+</div>
 
-        function orderProduct(code) {
-            let msg = "السلام عليكم، عايز أطلب المنتج رقم " + code;
-            let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
-            window.open(url, "_blank");
-        }
+<script>
+    let phone = "201118618196";
 
-        function orderCustom() {
-            let msg = "السلام عليكم، عايز تصميم خاص حسب الطلب";
-            let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
-            window.open(url, "_blank");
-        }
-    </script>
+    function order(code) {
+        let msg = "عايز أطلب المنتج رقم " + code + " مع خصم أول طلب";
+        let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
+        window.open(url, "_blank");
+    }
+</script>
 
 </body>
 </html>
